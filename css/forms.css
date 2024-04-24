@@ -1,0 +1,13 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(53, 34, 34, 0.767);
+    input{
+        border-radius: 50%;
+        margin: 15px auto;
+        text-align: center;
+    }
+}

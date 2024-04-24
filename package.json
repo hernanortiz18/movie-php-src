@@ -1,0 +1,25 @@
+{
+  "name": "movies-php",
+  "version": "1.0.0",
+  "description": "stack of movies selected for an admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hernanortiz18/movie-php-src.git"
+  },
+  "keywords": [
+    "Rojine2016"
+  ],
+  "author": "Hernán Matías Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hernanortiz18/movie-php-src/issues"
+  },
+  "homepage": "https://github.com/hernanortiz18/movie-php-src#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
