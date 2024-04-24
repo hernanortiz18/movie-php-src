@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="navbar-logo" src="" alt="Logo"><a href="">CAC-Movies</a>
+
+            <ul>
+                <li>
+                    <a href="#trending-section">TENDENCIAS</a>
+                </li>
+                <li>
+                    <a href="./pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="login">
+                    <a href="./pages/login.html">INICIAR SESIÓN</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header> 
+
+    <main id="main" class="main">
+        <div class="form">
+            <form class="register" action="POST">
+                <h3>Registro</h3>
+                <input type="text" class="input-name" placeholder="Nombre">
+                <input type="text" class="input-lastName" placeholder="Apellido">
+                <input type="email" class="input-email" placeholder="E-Mail">
+                <input type="date" class="input-date" placeholder="Fecha de nacimiento">
+                <input type="password" class="input-password" placeholder="Contraseña">
+                <select name="name" id="pais" class="input-country">
+                    <option value="">País</option>
+                    <option value="AR">Argentina</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BR">Brazil</option>
+                    <option value="CL">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Perú</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="VE">Venezuela</option>
+                </select>
+                <div class="input-terms">
+                    <input type="checkbox" class="terms-check">
+                    <label for="termns" class="terms-text">Acepto términos y condiciones</label>
+                </div>
+                <input type="submit" class="submit-button" value="Registrarse">
+                <div>
+                    <a class="register-help" href="">¿Necesitas ayuda?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
