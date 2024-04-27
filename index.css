@@ -1,26 +1,39 @@
 .home-section{
+    display: flex;
+    flex-direction: column;
     background-image: url("./assets/image/bg-main.jpg");
-    opacity: .90;
     background-size:cover;
-    padding-top: 20vh;
+    background-position: center;
+    opacity: .90;
+    padding-top: 10vh;
     text-align: center;
-    height: calc(100vh - 191px);
+    width: 100%;
+    min-height: calc(100 - 70px);
     color: rgb(255, 255, 255);
     h1{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     h2{
-        font-size: 1.30rem;
+        font-size: 2rem;
         margin-bottom: 60px;
     }
     a{
         background-color: rgb(145, 29, 29);
         color: white;
         font-size: 1.2rem;
-        padding: 10px;
+        width: 100vw;
         border-radius: 5px;
+        transition: .5s;
+        margin: 0;
+        height: 40px;
+        padding-top: 15px;
     }
     
+}
+
+.home-register-button:hover{
+    transform: scale(1.8);
+    transition: .5s;
 }
 
 .search-section{
@@ -32,6 +45,8 @@
         font-size: 1.8rem;
     }
     .search-input{
+        position: sticky;
+        
         input{
             width: 40vw;
             border: solid 1px rgba(221, 221, 221, 0.788);
@@ -59,30 +74,29 @@
     .grid-movies{
         display: flex;
         flex-wrap: wrap;
-        width: calc(100% - 30px);
+        width: 100%;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        margin: 10px;
-        flex-wrap: wrap;
+        margin: 0 auto;
+        
         .card-movie{
-            width: 220px;
             text-align: center;
             margin: 15px;
+            min-width: 400px;
+            max-width: 700px;
             img{
-                min-width: 220px;
-                max-width: 17vw;
-                align-content: center;
+                min-width: 10px;
+                max-width: 350px;
                 border-radius: 15px;
-                min-height: 100%;
                 margin: auto;
                 object-fit: cover;
             }
             h4{
                 font-size: 1.2rem;
                 text-align: center;
-                width: 100%;
-                overflow:auto;
+                word-wrap: break-word;
+                
             }
         }
         
@@ -108,12 +122,12 @@
             overflow-x: scroll;
             justify-content: space-between;
             li{
-                width: 200px;
+                max-width: 17vw;
                 text-decoration: none;
                 margin: 30px;
                 img{
                     object-fit: cover;
-                    min-width: 220px;
+                    min-width: 350px;
                     min-height: 100%;
                     max-width: 17vw;
                     align-content: center;
@@ -125,29 +139,39 @@
     }
 }
 
-footer{
-    display: flex;
-    padding: 20px;
-    width: 96vw;
-    background-color: rgb(145, 29, 29);
-    align-self: center;
-    justify-content: center;
-    ul{
-        display: flex;
-        list-style: none;
-        li{
-            margin: 10px;
-            a{
-                text-decoration: none;
-                font-size: 1.1rem;
-                font-weight: 700;
-            }
-            .admin{
-                padding: 10px 25px;
-                background-color: black;
-                align-items: center;
-                border-radius: 12px;
-            }
+/*---------------------------- MEDIA QUERYS -------------------------*/
+
+@media only screen and (max-width: 350px){
+
+    .trending-section{
+        h3{
+            font-size: 1.2rem;
         }
+     .grid-movies{
+        width: 100vw;
+         .card-movie{
+             width: 100vw;
+             img{
+                margin: 0 auto;
+                max-width: 80%;
+             }
+         }
+     }
+    } 
+ }
+
+ @media only screen and (max-width: 650px){
+    .home-section{
+        h1{
+            font-size: 2.5rem;
+        }
+        h2{
+            font-size: 1.3rem;            
+        }
+        a{            
+            font-size: 1rem;
+        }
+        
     }
-}
+
+ }

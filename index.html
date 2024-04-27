@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./css/layout.css">
+
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
-            <img class="navbar-logo" src="" alt="Logo"><a href="">CAC-Movies</a>
-
+            <img class="navbar-logo" src="./assets/image/favicon.ico" alt="Logo"><a href="./index.html">CAC-Movies</a>
             <ul>
                 <li>
                     <a href="#trending-section">TENDENCIAS</a>
@@ -23,7 +24,6 @@
                     <a href="./pages/login.html">INICIAR SESIÓN</a>
                 </li>
             </ul>
-
         </nav>
     </header>
 
@@ -31,7 +31,7 @@
         <section class="home-section">
             <h1>Películas y series ilimitadas<br>en un solo lugar</h1>
             <h2>Disfruta donde quieras. Cancela cuando quieras</h2>
-            <a href="./pages/register.html">REGISTRARTE</a>
+            <a class="home-register-button" href="./pages/register.html">REGISTRARSE</a>
         </section>
         <section class="search-section">
             <h3>¿Qué estás buscando para ver?</h3>
@@ -44,52 +44,76 @@
             <h3>Las tendencias de hoy</h3>
             <div class="grid-movies">
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/500-DIAS-JUNTOS.jpg" alt="500-DIAS-JUNTOS">
-                    <h4>500 DIAS JUNTOS</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/500-DIAS-JUNTOS.jpg" alt="500-DIAS-JUNTOS">
+                        <h4>500 DIAS JUNTOS</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/CABALLERO-OSCURO-JOKER.jpg" alt="CABALLERO-OSCURO-JOKER">
-                    <h4>CABALLERO OSCURO JOKER</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/CABALLERO-OSCURO-JOKER.jpg" alt="CABALLERO-OSCURO-JOKER">
+                        <h4>CABALLERO OSCURO JOKER</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/CISNE-NEGRO.jpg" alt="CISNE-NEGRO">
-                    <h4>CISNE NEGRO</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/CISNE-NEGRO.jpg" alt="CISNE-NEGRO">
+                        <h4>CISNE NEGRO</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/COMO-SER-JOHN-MALKOVICH.jpg" alt="COMO-SER-JOHN-MALKOVICH">
-                    <h4>COMO SER JOHN MALKOVICH</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/COMO-SER-JOHN-MALKOVICH.jpg" alt="COMO-SER-JOHN-MALKOVICH">
+                        <h4>COMO SER JOHN MALKOVICH</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/CRANK.jpg" alt="CRANK">
-                    <h4>CRANK</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/CRANK.jpg" alt="CRANK">
+                        <h4>CRANK</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS.jpg" alt="EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS">
-                    <h4>EL ORIGEN DEL PLANETA DE LOS SIMIOS</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS.jpg" alt="EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS">
+                        <h4>EL ORIGEN DEL PLANETA DE LOS SIMIOS</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/LA-CRUDA-REALIDAD.jpg" alt="LA-CRUDA-REALIDAD">
-                    <h4>LA CRUDA REALIDAD</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/LA-CRUDA-REALIDAD.jpg" alt="LA-CRUDA-REALIDAD">
+                        <h4>LA CRUDA REALIDAD</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/LIFE-AQUATIC.jpg" alt="LIFE-AQUATIC">
-                    <h4>LIFE AQUATIC</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/LIFE-AQUATIC.jpg" alt="LIFE-AQUATIC">
+                        <h4>LIFE AQUATIC</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/LOOPER.jpg" alt="LOOPER">
-                    <h4>LOOPER</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/LOOPER.jpg" alt="LOOPER">
+                        <h4>LOOPER</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/SHAME.jpg" alt="SHAME">
-                    <h4>SHAME</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/SHAME.jpg" alt="SHAME">
+                        <h4>SHAME</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/SILENT-HILL.jpg" alt="SILENT-HILL">
-                    <h4>SILENT HILL</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/SILENT-HILL.jpg" alt="SILENT-HILL">
+                        <h4>SILENT HILL</h4>
+                    </a>
                 </div>
                 <div class="card-movie">
-                    <img src="./assets/image/movies/trending/THE-AMAZING-SPIDERMAN.jpg" alt="THE-AMAZING-SPIDERMAN">
-                    <h4>THE AMAZING SPIDERMAN</h4>
+                    <a href="./pages/detail.html">
+                        <img src="./assets/image/movies/trending/THE-AMAZING-SPIDERMAN.jpg" alt="THE-AMAZING-SPIDERMAN">
+                        <h4>THE AMAZING SPIDERMAN</h4>
+                    </a>
                 </div>
             </div>
         </section>
@@ -123,6 +147,8 @@
             <li><a href="" class="admin">Administrador de películas</a></li>
         </ul>
     </footer>
-    
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
