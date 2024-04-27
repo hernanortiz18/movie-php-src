@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/details.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <title>Detail</title>   
 <body>
@@ -15,17 +17,40 @@
 
             <ul>
                 <li>
-                    <a href="#trending-section">TENDENCIAS</a>
+                    <a href="../index.html">TENDENCIAS</a>
                 </li>
                 <li>
-                    <a href="">REGISTRARSE</a>
+                    <a href="../pages/register.html">REGISTRARSE</a>
                 </li>
                 <li class="login">
-                    <a href="./login.html">INICIAR SESIÓN</a>
+                    <a href="../pages/login.html">INICIAR SESIÓN</a>
                 </li>
             </ul>
         </nav>
     </header> 
+
+    <main>
+        <section class="detail-section">
+            <img class="detail-image" src="../assets/image/mario-bg.jpg" alt="">
+            <div class="detail-text">
+                <h1>THE SUPER MARIO BROS - MOVIE</h1>
+                <div class="detail-icons"><i class="bi bi-calendar3"> Fecha de estreno:</i><p>04/05/2023</p></div>
+                <div class="detail-icons"><i class="bi bi-clock-history">Duración:</i><p>1h 33m</p></div>
+                <div class="detail-icons"><i class="bi bi-tags-fill">Generos</i><p>Animation, Family, Adventure, Fantasy, Comedy</p></div>
+                <h2>Overview</h2>
+                <p>While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.</p>
+            </div>
+
+        </section>
+
+        <section class="detail-trailer">
+            <div class="trailer-video">
+                <h2>Ver trailer</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjNcTBXTk4I?si=7fnK8NtlxetW0d1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            </div>
+        </section>
+    </main>
+
 
     <footer> 
         <ul>
@@ -35,5 +60,7 @@
             <li><a href="" class="admin">Administrador de películas</a></li>
         </ul>
     </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
