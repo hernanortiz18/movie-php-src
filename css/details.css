@@ -1,0 +1,35 @@
+.detail-section{
+    max-width: 100vw;
+    padding: 10px 40px;
+    display: flex;
+    height: 40vh;
+    .detail-image{
+        max-width: 50vw;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .detail-text{
+        text-align: center;
+        flex-direction: column;
+        padding: 0 70px;
+    }
+}
+
+.detail-trailer{
+    display: flex;
+    .trailer-video{
+        text-align: center;
+        transition: 1s;
+        iframe{
+        margin-left: 40px;
+        transition: 1s;
+        }
+        iframe:hover{
+            text-align: left;
+            width: 50vw;
+            transition: 1s;
+        }
+    }
+}
+
+
