@@ -1,35 +1,84 @@
-.detail-section{
-    max-width: 100vw;
-    padding: 10px 40px;
+main{
     display: flex;
-    height: 40vh;
-    .detail-image{
-        max-width: 50vw;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-    .detail-text{
-        text-align: center;
-        flex-direction: column;
-        padding: 0 70px;
-    }
-}
-
-.detail-trailer{
-    display: flex;
-    .trailer-video{
-        text-align: center;
-        transition: 1s;
-        iframe{
-        margin-left: 40px;
-        transition: 1s;
+    flex-direction: column;
+    .detail-section{
+        max-width: 100vw;
+        padding: 10px 40px;
+        display: flex;
+        min-height: 40vh;
+        .detail-image{
+            max-width: 50vw;
+            object-fit: cover;
+            border-radius: 20px;
+            height: 100%;
         }
-        iframe:hover{
-            text-align: left;
-            width: 50vw;
+        .detail-text{
+            text-align: center;
+            flex-direction: column;
+            margin: 0 30px;
+            .detail-icons{
+                display: inline-flex;
+                text-align: center;
+            }
+        }
+    }
+    .detail-trailer{
+        display: flex;
+        margin: 5px 10px 90px 10px;
+        .trailer-video{
+            text-align: center;
             transition: 1s;
+            iframe{
+            margin-left: 40px;
+            transition: 1s;
+            }
+            @media only screen and (min-width:650px){
+                iframe:hover{
+                    font-size: .8rem;
+                    width: 90vw;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+    .detail-info{
+        display: flex;
+        margin-left: 20px;
+        width: 100%;
+        margin: auto;
+        .redes{
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .info{
+            text-align: left;
+            justify-content: baseline;
         }
     }
 }
 
+@media only screen and (max-width: 650px){
+    .detail-section{
+        flex-direction: column;
+        .detail-image{
+            min-width: 100%;
+        }
+    }
+    .detail-trailer{
+        margin: auto;
+        .trailer-video{
+            justify-content: center;
+            iframe{
+                max-width: calc(100vw - 90px);
+            }
+        }
+    }
+}
 
