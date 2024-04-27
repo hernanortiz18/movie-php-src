@@ -5,32 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/forms.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Register</title>
 </head>
 <body>
     <header>
         <nav>
-            <img class="navbar-logo" src="" alt="Logo"><a href="">CAC-Movies</a>
+            <img class="navbar-logo" src="../assets/image/favicon.ico" alt="Logo"><a href="../index.html">CAC-Movies</a>
 
             <ul>
                 <li>
                     <a href="#trending-section">TENDENCIAS</a>
                 </li>
                 <li>
-                    <a href="./pages/register.html">REGISTRARSE</a>
+                    <a href="">REGISTRARSE</a>
                 </li>
                 <li class="login">
-                    <a href="./pages/login.html">INICIAR SESIÓN</a>
+                    <a href="./login.html">INICIAR SESIÓN</a>
                 </li>
             </ul>
-
         </nav>
     </header> 
 
-    <main id="main" class="main">
+    <main id="main" class="main main-register">
         <div class="form">
             <form class="register" action="POST">
-                <h3>Registro</h3>
+                <h1>Registro</h1>
                 <input type="text" class="input-name" placeholder="Nombre">
                 <input type="text" class="input-lastName" placeholder="Apellido">
                 <input type="email" class="input-email" placeholder="E-Mail">
@@ -60,5 +62,14 @@
             </form>
         </div>
     </main>
+
+    <footer> 
+        <ul>
+            <li><a href="">Términos y condiciones</a></li>
+            <li><a href="">Preguntas frecuentes</a></li>
+            <li><a href="">Ayuda</a></li>
+            <li><a href="" class="admin">Administrador de películas</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

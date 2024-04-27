@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/layout.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Login</title>
 </head>
 <body>
     <header>
         <nav>
-            <img class="navbar-logo" src="" alt="Logo"><a href="">CAC-Movies</a>
-
+            <img class="navbar-logo" src="../assets/image/favicon.ico" alt="Logo"><a href="../index.html">CAC-Movies</a>
             <ul>
                 <li>
                     <a href="#trending-section" class="">TENDENCIAS</a>
                 </li>
                 <li>
-                    <a href="./pages/register.html">REGISTRARSE</a>
+                    <a href="./register.html">REGISTRARSE</a>
                 </li>
                 <li class="login">
-                    <a href="./pages/login.html">INICIAR SESIÓN</a>
+                    <a href="">INICIAR SESIÓN</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="main" id="main">
+    <main class="main main-login" id="main">
         <div class="form">
-            <form class="login" action="POST">
+            <form class="login-form" action="POST">
                 <h2>Ingresar</h2>
                 <input type="email" class="input-email" placeholder="E-Mail">
                 <input type="password" class="input-password" placeholder="Password">
-                <input type="submit" class="login-button" value="Ingresar">
+                <input type="submit" class="submit-button" value="Ingresar">
             </form>
         </div>
     </main>
-
+    <footer> 
+        <ul>
+            <li><a href="">Términos y condiciones</a></li>
+            <li><a href="">Preguntas frecuentes</a></li>
+            <li><a href="">Ayuda</a></li>
+            <li><a href="" class="admin">Administrador de películas</a></li>
+        </ul>
+    </footer>
 
 </body>
 </html>

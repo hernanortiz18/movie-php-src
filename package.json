@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/hernanortiz18/movie-php-src#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap-icons": "^1.11.3"
   }
 }
