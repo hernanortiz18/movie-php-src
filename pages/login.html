@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/forms.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +33,11 @@
             <form class="login-form" action="POST">
                 <h2>Ingresar</h2>
                 <input type="email" class="input-email" placeholder="E-Mail">
-                <span class="error-email"></span>
+                <p class="error-email"></p>
                 <input type="password" class="input-password" placeholder="Password">
-                <span class="error-password"></span>
+                <p class="error-password"></p>
                 <input type="submit" class="submit-button" value="Ingresar">
+                <p class="error-form"></p>
             </form>
         </div>
     </main>
@@ -49,5 +50,6 @@
         </ul>
     </footer>
 
+    <script src="../js/login.js"></script>
 </body>
 </html>

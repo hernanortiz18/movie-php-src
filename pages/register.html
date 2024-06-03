@@ -34,10 +34,15 @@
             <form class="register" action="POST">
                 <h1>Registro</h1>
                 <input type="text" class="input-name" placeholder="Nombre">
+                <p class="error-name"></p>
                 <input type="text" class="input-lastName" placeholder="Apellido">
+                <p class="error-lastName"></p>
                 <input type="email" class="input-email" placeholder="E-Mail">
+                <p class="error-email"></p>
                 <input type="date" class="input-date" placeholder="Fecha de nacimiento">
+                <p class="error-date"></p>
                 <input type="password" class="input-password" placeholder="Contraseña">
+                <p class="error-password"></p>
                 <select name="name" id="pais" class="input-country">
                     <option value="">País</option>
                     <option value="AR">Argentina</option>
@@ -51,10 +56,12 @@
                     <option value="UY">Uruguay</option>
                     <option value="VE">Venezuela</option>
                 </select>
+                <p class="error-country"></p>
                 <div class="input-terms">
                     <input type="checkbox" class="terms-check">
                     <label for="termns" class="terms-text">Acepto términos y condiciones</label>
                 </div>
+                <p class="error-terms"></p>
                 <input type="submit" class="submit-button" value="Registrarse">
                 <div>
                     <a class="register-help" href="">¿Necesitas ayuda?</a>
@@ -71,5 +78,7 @@
             <li><a href="" class="admin">Administrador de películas</a></li>
         </ul>
     </footer>
+
+    <script src="../js/register.js"></script>
 </body>
 </html>
