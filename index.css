@@ -66,6 +66,23 @@
 .trending-section{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
+        i{
+            color:rgb(255, 255, 255);
+            font-size: 2em;
+            transition: .5;
+        }
+        i:hover{
+            cursor: pointer;
+            color:rgb(145, 29, 29);
+            transition: .5s;
+        }
+        h4{
+            font-size: 2em;
+            margin: 0 10px;
+        }
+    }
     h3{
         font-size: 1.8rem;
         text-align: center;
@@ -82,12 +99,12 @@
         
         .card-movie{
             text-align: center;
-            margin: 15px;
-            min-width: 400px;
-            max-width: 700px;
+            margin: 10px;
+            min-width: 200px;
+            max-width: 250px;
             img{
                 min-width: 10px;
-                max-width: 350px;
+                max-width: 250px;
                 border-radius: 15px;
                 margin: auto;
                 object-fit: cover;
@@ -107,35 +124,37 @@
         }
         
     }
-}
+
 
 .acclaimed-section{
     display: flex;
     flex-direction: column;
     text-align: center;
     align-content: center;
-    margin: 30px auto;
+    margin: auto;
     width: 90vw;
     h3{
+        width: 100%;
         font-size: 1.8rem;
     }
     .acclaimed-movies{
         display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
         flex-direction: row;
-        ul{
-            display: flex;
+        .card-movie{
+            display: inline-block;
             list-style: none;
-            overflow-x: scroll;
-            justify-content: space-between;
-            li{
-                max-width: 17vw;
+            margin: 0 10px;
+            a{
+                max-width: 10vw;
                 text-decoration: none;
                 margin: 30px;
                 img{
                     object-fit: cover;
-                    min-width: 350px;
-                    min-height: 100%;
-                    max-width: 17vw;
+                    width: 150px;
+                    height: auto;
                     align-content: center;
                     border-radius: 15px;
                     margin: auto;
