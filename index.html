@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./css/layout.css">
 
@@ -26,7 +27,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="home-section">
             <h1>Películas y series ilimitadas<br>en un solo lugar</h1>
@@ -42,100 +42,15 @@
         <hr>
         <section id="trending-section" class="trending-section">
             <h3>Las tendencias de hoy</h3>
-            <div class="grid-movies">
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/500-DIAS-JUNTOS.jpg" alt="500-DIAS-JUNTOS">
-                        <h4>500 DIAS JUNTOS</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/CABALLERO-OSCURO-JOKER.jpg" alt="CABALLERO-OSCURO-JOKER">
-                        <h4>CABALLERO OSCURO JOKER</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/CISNE-NEGRO.jpg" alt="CISNE-NEGRO">
-                        <h4>CISNE NEGRO</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/COMO-SER-JOHN-MALKOVICH.jpg" alt="COMO-SER-JOHN-MALKOVICH">
-                        <h4>COMO SER JOHN MALKOVICH</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/CRANK.jpg" alt="CRANK">
-                        <h4>CRANK</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS.jpg" alt="EL-ORIGEN-DEL-PLANETA-DE-LOS-SIMIOS">
-                        <h4>EL ORIGEN DEL PLANETA DE LOS SIMIOS</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/LA-CRUDA-REALIDAD.jpg" alt="LA-CRUDA-REALIDAD">
-                        <h4>LA CRUDA REALIDAD</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/LIFE-AQUATIC.jpg" alt="LIFE-AQUATIC">
-                        <h4>LIFE AQUATIC</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/LOOPER.jpg" alt="LOOPER">
-                        <h4>LOOPER</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/SHAME.jpg" alt="SHAME">
-                        <h4>SHAME</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/SILENT-HILL.jpg" alt="SILENT-HILL">
-                        <h4>SILENT HILL</h4>
-                    </a>
-                </div>
-                <div class="card-movie">
-                    <a href="./pages/detail.html">
-                        <img src="./assets/image/movies/trending/THE-AMAZING-SPIDERMAN.jpg" alt="THE-AMAZING-SPIDERMAN">
-                        <h4>THE AMAZING SPIDERMAN</h4>
-                    </a>
-                </div>
-            </div>
+            <div class="grid-movies"></div>
+            <i class="bi bi-plus-square-fill more-page"></i>
         </section>
 
         <hr>
 
         <section class="acclaimed-section">
             <h3>Las más aclamadas</h3>
-            <div class="acclaimed-movies">
-                <ul>
-                    <li><img src="./assets/image/movies/acclaimed/Anatomy-Murder-2.jpg" alt="Anatomy-Murder-2"></li>
-                    <li><img src="./assets/image/movies/acclaimed/joker-2019-poster-joaquin-phoenix.jpg" alt="JOKER"></li>
-                    <li><img src="./assets/image/movies/acclaimed/krisha.jpg" alt="krisha"></li>
-                    <li><img src="./assets/image/movies/acclaimed/lalaland.jpg" alt="lalaland"></li>
-                    <li><img src="./assets/image/movies/acclaimed/metropolis-1.jpg" alt="metropolis"></li>
-                    <li><img src="./assets/image/movies/acclaimed/moonlight.jpg" alt="moonlight"></li>
-                    <li><img src="./assets/image/movies/acclaimed/scarface-1983-poster.jpg" alt="scarface"></li>
-                    <li><img src="./assets/image/movies/acclaimed/sing-street.jpg" alt="sing-street"></li>
-                    <li><img src="./assets/image/movies/acclaimed/the-exorcist-poster.jpg" alt="the-exorcist"></li>
-                    <li><img src="./assets/image/movies/acclaimed/vertigo-poster-saul-bass.jpg" alt="vertigo"></li>
-                </ul>
-            </div>
+            <div class="acclaimed-movies"></div>
         </section>
     </main>
 
@@ -150,5 +65,6 @@
 
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/movies.js"></script>
 </body>
 </html>
