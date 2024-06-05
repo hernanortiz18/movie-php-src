@@ -82,8 +82,9 @@ footer{
             margin: 10px;
             a{
                 text-decoration: none;
-                font-size: 1.1rem;
+                font-size: .72rem;
                 font-weight: 700;
+                text-wrap: wrap;
             }
             .admin{
                 padding: 10px 25px;
@@ -95,9 +96,10 @@ footer{
     }
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 655px){
     footer{
         ul{
+            flex-direction: column;
             li{
                 a{
                     text-decoration: none;
@@ -116,18 +118,60 @@ footer{
     }
     header{
         nav{
-            img{
-                margin: 0 auto;
-                width: 15px;
-                object-fit: cover;
-                a{
+            a{
                 font-size: .8rem;
             }
-
-        }
+            .navbar-logo{
+                margin: 0;
+                width: 25px;
+                height: auto;
+                object-fit: cover;
+                a{
+                    font-size: .8rem;
+                }
+                
+            }
             ul{
-               margin: 0;
+                margin-left: auto;
                 li{
+                    .trending{
+                        display: none;
+                    }
+                    a{
+                        font-size:.8rem;
+                        font-weight: 300;
+                    }
+                    .login{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+ @media only screen and (max-width: 330px) {
+    header{
+        nav{
+            a{
+                font-size: .8rem;
+            }
+            .navbar-logo{
+                margin: 0;
+                width: 25px;
+                height: auto;
+                object-fit: cover;
+                a{
+                    font-size: .8rem;
+                }
+                
+            }
+            ul{
+                margin-left: -65px;
+                li{
+                    .trending{
+                        display: none;
+                    }
                     a{
                         font-size:.8rem;
                         font-weight: 300;
@@ -137,3 +181,4 @@ footer{
         }
     }
  }
+ 
