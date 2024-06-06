@@ -7,6 +7,7 @@ body{
     color: rgba(248, 248, 255, 0.829);
     font-family: roboto;
     width: 100vw;
+    min-height: 100vh;
     overflow-x: hidden;
     a{
         margin: 10px;
