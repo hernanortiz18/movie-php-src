@@ -164,6 +164,10 @@
     }
 }
 
+.acclaimed-section::-webkit-scrollbar{
+    height: 45px;
+}
+
 /*---------------------------- MEDIA QUERYS -------------------------*/
 
 @media only screen and (max-width: 350px){
