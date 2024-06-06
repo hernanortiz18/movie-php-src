@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     display: flex;
@@ -6,9 +7,9 @@ body{
     color: rgba(248, 248, 255, 0.829);
     font-family: roboto;
     width: 100vw;
-    
+    overflow-x: hidden;
     a{
-      margin: 10px;
+        margin: 10px;
       text-decoration: none;
       color: rgba(248, 248, 255, 0.829);
     }
@@ -19,7 +20,7 @@ body{
     }
 }
 
-body > *{
+    body > *{
     max-width: 100vw;
 }
 
@@ -27,7 +28,7 @@ header {
     nav{
         display: flex;
         position: sticky;
-        max-width: 100vw;
+        max-width: 99vw;
         height: 60px;
         background-color: rgb(145, 29, 29);
         align-items: center;
@@ -50,7 +51,9 @@ header {
             .login{
                 display: flex;
                 background-color: black;
+                width: auto;
                 height: 40px;
+                text-align: center;
                 margin-right: 15px;
                 align-items: center;
                 border-radius: 12px;
