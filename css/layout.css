@@ -7,12 +7,12 @@ body{
     color: rgba(248, 248, 255, 0.829);
     font-family: roboto;
     width: 100vw;
-    min-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     a{
         margin: 10px;
-      text-decoration: none;
-      color: rgba(248, 248, 255, 0.829);
+        text-decoration: none;
+        color: rgba(248, 248, 255, 0.829);
     }
     hr{
         width: 70vw;

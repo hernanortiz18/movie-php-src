@@ -1,6 +1,4 @@
-main{
-    height: 100%;
-}
+
 .form{
     display: flex;
     position: relative;
@@ -14,7 +12,9 @@ main{
     margin: 30px auto;
     border-radius: 15px;
     transition: .5s;
-    
+    .login-form{
+        margin: 57.8px auto;
+    }
     p{
         color: rgb(250,250,250);
     }
