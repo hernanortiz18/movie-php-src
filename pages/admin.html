@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="icon" href="/assets/image/favicon.ico" tyle="image/x-icon">
+    <title>Administrador de Peliculas</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <img class="navbar-logo" src="../assets/image/favicon.ico" alt="Logo"><a href="../index.html">CAC-Movies</a>
+            <ul>
+                <li>
+                    <a href="#trending-section" class="trending">TENDENCIAS</a>
+                </li>
+                <li>
+                    <a href="../pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="login">
+                    <a href="../pages/login.html">INICIAR SESIÓN</a>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <section>
+            <h1>Gestión de Películas</h1>
+            <h4>En esta sección se podra llevar a cabo la gestión de las peliculas del portal</h4>
+            <h5>Título</h5>
+            <input type="search" placeholder="">
+            <h5>Fecha de Lanzamiento</h5>
+            <input type="date" class="input-date" placeholder="Fecha de Lanzamiento">
+            <p class="error-date"></p>
+            <h5>Genero</h5>
+            <input type="search" placeholder="">
+            <h5>Duración</h5>
+            <input type="search" placeholder="">
+            <h5>Director</h5>
+            <input type="search" placeholder="">
+            <h5>Reparto</h5>
+            <input type="search" placeholder="">
+            <h5>Sinopsis</h5>
+            <input type="search" placeholder="">
+            <h5>Imagen</h5>
+            <form>
+                <label for="fileInput"></label>
+                <input type="file" id="fileInput" name="fileInput">
+            </form>
+            <br>
+            <button class="search-button">Agregar Película</button>
+        </section>
+        <hr>
+        <section>
+            <h1>Listado de Películas</h1>
+            <h4>Para ver todos los datos de las películas, eliga una y toque modificar</h4>
+            <br>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Género</th>
+                            <th>Imagen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre de Película</td>
+                            <td>Genero de la película</td>
+                            <td><img src=""></td>
+                            <td>
+                                <button class="btn-modify">Modificar</button>
+                                <button class="btn-delete">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <br>
+    <footer> 
+        <ul>
+            <li><a href="">Términos y condiciones</a></li>
+            <li><a href="">Preguntas frecuentes</a></li>
+            <li><a href="">Ayuda</a></li>
+            <li><a href="./pages/admin.html" class="admin">Administrador de películas</a></li>
+        </ul>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/movies.js"></script>
 </body>
 </html>
