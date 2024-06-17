@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse | CAC-MOVIES</title>
+    <!--aos animaciones-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-lg navbar-dark bgMenu">
+            <div class="container">
+              <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>CAC-Movies</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="../index#tendencias">Tendencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " href="./registrarse.html">Registrarse</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active iniSesion" href="./iniciosesion.html">Iniciar Sesión</a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+      
+    </header>
+    <main class="row text-center justify-content-center bgRegistro" >
+      <section  data-aos="zoom-in"  data-aos-duration="1000" class="col-8 col-md-4 mt-2 ">
+        <form id="formDirector" class="form-signin alert alert-dark" role="alert" action="../controlador/alta/alta_directores.php" method="post" >
+            <h2 class="h3 mb-3 font-weight-normal">Alta de Director</h2>
+            <div class="form-label-group">
+                <input type="text" class="form-control " id="inputNombre" placeholder="Nombre" required  name="nombre">
+                <div id="nombreError" class="error-message"></div>
+              </div>
+            <div class="form-label-group"> 
+                <input type="text" class="form-control mt-2" id="inputApellido" placeholder="Apellido" required name="apellido">
+                <div id="apellidoError" class="error-message"></div>
+              </div>
+         
+            <div class="form-label-group">
+                <input type="text" class="form-control mt-2" id="nacionalidad" placeholder="Nacionalidad" required  name="nacionalidad">
+                <div id="NacError" class="error-message"></div>
+              </div>
+            <div class="form-label-group">
+                <input type="date" class="form-control mt-2" id="fecha" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required id="fechaNacimiento" name="fechaNacimiento">
+                <div id="fNacimientoError" class="error-message"></div>
+              </div>
+         
+           
+            <div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Alta</button>
+            </div>
+        </form>
+      </section>
+  
+    </main>
+  
+    <footer class="container-fluid">
+        <nav class="navegacion h-100">
+            <ul class="h-100 d-flex flex-column flex-md-row sinLista gap-3 justify-content-evenly align-items-center">
+                <li class="listaItem"><a class="text-white fs-6 text-decoration-none" href="">Términos y condiciones</a></li>
+                <li class="listaItem"><a class="text-white fs-6 text-decoration-none" href="">Preguntas frecuentes</a></li>
+                <li class="listaItem"><a class="text-white fs-6 text-decoration-none" href="">Ayuda</a></li>
+                <li class="listaItem"><a class="text-white fs-6 text-decoration-none administradorPeliculas" href="">Administrador Peliculas</a></li>
+            </ul>
+        </nav>
+    </footer >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+   AOS.init();
+   </script>
+</body>
+</html>
