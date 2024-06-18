@@ -123,10 +123,15 @@
         }
         
     }
-    .more-pages{
+
+    button{
+        background-color: none;
+        .more-pages{
         height: 12px;
         width: 12px;
+        }   
     }
+
 }
 
 
