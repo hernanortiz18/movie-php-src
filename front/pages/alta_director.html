@@ -32,34 +32,17 @@
     </header>
     <main class="row text-center justify-content-center bgRegistro" >
       <section  data-aos="zoom-in"  data-aos-duration="1000" class="col-8 col-md-4 mt-2 ">
-
-        <form class="form" id="formDirector" class="form-signin alert alert-dark" role="alert" action="../controlador/alta/alta_directores.php" method="post" >
-
-            <h2 class="h3 mb-3 font-weight-normal">Alta de Director</h2>
-            <div class="form-label-group">
+        <form class="form" id="formDirector" class="form-signin alert alert-dark" role="alert" action="../../controlador/alta/alta_directores.php" method="post" >
+            <h1 class="h3 mb-3 font-weight-normal">Alta de Director</h2>
                 <input type="text" class="form-control " id="inputNombre" placeholder="Nombre" required  name="nombre">
                 <div id="nombreError" class="error-message"></div>
-              </div>
-            <div class="form-label-group"> 
                 <input type="text" class="form-control mt-2" id="inputApellido" placeholder="Apellido" required name="apellido">
                 <div id="apellidoError" class="error-message"></div>
-              </div>
-         
-            <div class="form-label-group">
                 <input type="text" class="form-control mt-2" id="nacionalidad" placeholder="Nacionalidad" required  name="nacionalidad">
                 <div id="NacError" class="error-message"></div>
-              </div>
-            <div class="form-label-group">
                 <input type="date" class="form-control mt-2" id="fecha" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required id="fechaNacimiento" name="fechaNacimiento">
-                <div id="fNacimientoError" class="error-message"></div>
-              </div>
-         
-           
-            <div>
-
-              <button class="btn btn-lg btn-primary btn-block submit-button" type="submit">Alta</button>
-
-            </div>
+                <div id="fNacimientoError" class="error-message"></div>              
+                <input class="btn btn-lg btn-primary btn-block submit-button" type="submit" value="REGISTRAR DIRECTOR">        
         </form>
       </section>
   
