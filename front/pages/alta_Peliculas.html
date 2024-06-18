@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/forms.css">
+
     <title>Alta Películas | CAC-MOVIES</title>
     <!--aos animaciones-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
@@ -29,8 +31,9 @@
     </header>
     <main >
       <section  data-aos="zoom-in"  data-aos-duration="1000" >
-        <form id="formDirector"  role="alert" action="../controlador/alta/alta_peliculas.php" method="post" >
-            <h2 >Alta de Peliculas Modificar los campos para el alta, esto es para ver la carga de directores</h2>
+        <h1>Alta de Peliculas Modificar los campos para el alta, esto es para ver la carga de directores</h2>
+        <form id="formDirector" class="form" role="alert" action="../controlador/alta/alta_peliculas.php" method="post" >
+
             <div class="form-label-group">
                 <input type="text" class="form-control " id="inputTitulo" placeholder="Nombre" required  name="titulo">
                 <div id="nombreError" class="error-message"></div>
@@ -57,7 +60,9 @@
               </div> 
            
             <div>
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Alta</button>
+
+              <button class="submit-button btn-lg btn-primary btn-block" type="submit">Alta</button>
+
             </div>
         </form>
       </section>
