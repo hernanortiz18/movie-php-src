@@ -15,7 +15,7 @@
 <body>
     <header >
       <nav>
-        <img class="navbar-logo" src="../assets/image/favicon.ico" alt="Logo"><a href="../index.html">CAC-Movies</a>
+        <img class="navbar-logo" src="../assets/image/favicon.ico" alt="Logo"><a href="../../index.html">CAC-Movies</a>
         <ul>
             <li>
                 <a href="./register.html">REGISTRARSE</a>
@@ -30,11 +30,13 @@
       <section  data-aos="zoom-in"  data-aos-duration="1000" class="col-8 col-md-4 mt-2 ">
         <form class="form" id="formDirector" class="form-signin alert alert-dark" role="alert" action="../../controlador/alta/alta_peliculas.php" method="post" >
             <h1 class="h3 mb-3 font-weight-normal">Alta de Película</h2>
-                <input type="text" class="form-control " id="inputNombre" placeholder="Nombre" required  name="nombre">
+                <input type="text" class="form-control " id="inputNombre" placeholder="Título" required  name="title">
                 <div id="nombreError" class="error-message"></div>
-                <input type="text" class="form-control mt-2" id="inputApellido" placeholder="Apellido" required name="apellido">
+                <select id="select-directores">
+                  <option value="">Director</option>
+                </select>
                 <div id="apellidoError" class="error-message"></div>
-                <input type="text" class="form-control mt-2" id="nacionalidad" placeholder="Nacionalidad" required  name="nacionalidad">
+                <textarea class="form-control mt-2" id="sinopsis" placeholder="Sinopsis" required  name="sinopsis"></textarea>
                 <div id="NacError" class="error-message"></div>
                 <input type="date" class="form-control mt-2" id="fecha" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required id="fechaNacimiento" name="fechaNacimiento">
                 <div id="fNacimientoError" class="error-message"></div>              
