@@ -32,6 +32,12 @@ h1{
         text-align: center;
         transition: .5s;
     }
+    textarea{
+        width: 100%;
+        height: 50px;
+        resize: none;
+        border: 15px;
+    }
     input:focus{
         background-color: rgba(180, 9, 9, 0.221);
         color: white;
