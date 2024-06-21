@@ -1,0 +1,21 @@
+
+    h2{
+
+        text-align: center;
+    }
+.sectionPrincipal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 180px);
+    align-items: center;
+    margin: 25px;
+    .buttons-admin{
+        a{
+            background-color: rgba(180, 9, 9, 0.521);
+            padding: 12px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+        }
+    }
+}
