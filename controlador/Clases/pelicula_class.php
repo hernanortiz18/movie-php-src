@@ -1,5 +1,5 @@
 <?php
-class Pelicula {
+class Director {
     public $titulo;
     public $fechaLanzamiento;
     public $genero;
