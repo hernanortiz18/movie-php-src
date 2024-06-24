@@ -1,6 +1,7 @@
 options = {
     method: 'GET',
-    accept: 'application/json'
+    headers:{'Content-Type': 'application/json',},
+    body: JSON.stringify(response),
 }
 
 const getDirectors = () => {
@@ -14,8 +15,8 @@ const listDirectors = (arrayDirector) => {
     const inputDirectors = document.getElementById('select_directores')
     arrayDirector.forEach((director)=>{
         optionDirector = document.createElement('option')
-        inputDirectors.value = director.id_director;
-        inputDirectors.textContent = director.d_nombre+''+director.d_apellido
+        optionDirector.value = director.id_director;
+        optionDirector.textContent = `${director.d_nombre} ${director.d_apellido}`
         inputDirectors.appendChild(optionDirector)
     })
 }
