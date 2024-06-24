@@ -1,16 +1,9 @@
-options = {
-    method: 'GET',
-    accept: 'application/json'
-}
+import { Movies } from "./utils";
 
-const getAllMovies = () => {
-    fetch('../../controlador/cargar_peliculas.php', options)
-    .then(response => response.json())
-    .then(response => {listMovies(response)})
-    .catch(err => console.error(err))
-}
+const {getAllMovies} = Movies;
 
-const listMovies = (arrayMovies) => {
+const listMovies = () => {
+    const arrayMovies = getAllMovies()
     const movieList = document.getElementById("movie-list");
     arrayMovies.forEach(movie => {
         const movieContainer = document.createElement('div')
@@ -35,3 +28,7 @@ const listMovies = (arrayMovies) => {
         movieContainer.appendChild(infoMovie)
     });
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    listMovies();
+})
