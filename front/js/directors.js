@@ -1,16 +1,10 @@
-options = {
-    method: 'GET',
-    headers:{'Content-Type': 'application/json',},
-}
+import { Directors } from "./utils"
 
-const getDirectors = () => {
-    fetch(`../../controlador/cargar_directores.php`, options)
-    .then(response => response.json())
-    .then(response => {listDirectors(response)})
-    .catch(err => console.error(err))
-}
+const {getAllDirectors} = Directors;
 
 const listDirectors = (arrayDirector) => {
+
+    const arrayDirector = getAllDirectors()
     const inputDirectors = document.getElementById('select_directores')
     arrayDirector.forEach((director)=>{
         optionDirector = document.createElement('option')
@@ -21,5 +15,5 @@ const listDirectors = (arrayDirector) => {
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-    getDirectors();
+    listDirectors();
 })
