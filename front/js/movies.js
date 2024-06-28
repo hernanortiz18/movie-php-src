@@ -1,9 +1,4 @@
-import { Movies } from "./utils.js";
 
-const {getAllMovies} = Movies;
-
-let result;
-let page = 1;
 const options = {
     method: 'GET',
     headers: {
@@ -21,29 +16,6 @@ const getAcclaimedMovies = () => {
   .catch(err => console.error(err));
 }
 
-const renderTrendingMovies = () => {
-    const arrayMovies = getAllMovies();
-    arrayMovies.forEach(((movie)=>{
-      const movieContainer = document.getElementsByClassName("grid-movies")[0]
-      
-      const cardMovie = document.createElement("div")
-      const anchor = document.createElement("a")
-      const imageMovie = document.createElement("img")
-      const title = document.createElement("h4")
-      
-      cardMovie.classList.add("card-movie")
-      anchor.href="./pages/detail.html"
-      
-      title.textContent=movie.title
-      imageMovie.alt=movie.title
-      imageMovie.src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
-      
-      anchor.appendChild(imageMovie);
-      anchor.appendChild(title);
-      cardMovie.appendChild(anchor);
-      movieContainer.appendChild(cardMovie);
-    }))
-}
 
 const renderAcclaimedMovies = (arrayMovies) => {
   

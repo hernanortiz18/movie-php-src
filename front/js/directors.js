@@ -9,7 +9,7 @@
     // putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
     const getAllDirectors = () => {
-        fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET'})
+        fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
         .then(response => response.json())
         .then(response => {
             console.log(response)
