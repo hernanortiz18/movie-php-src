@@ -18,8 +18,6 @@ class Pelicula {
         $this->sinopsis = $sinopsis;
         $this->imagen = $imagen;
     }
-
-   
 public function insertarPelicula($json) {
             /* paso los datos del json a un array*/ 
             $datos = json_decode($json, true);
