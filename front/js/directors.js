@@ -9,7 +9,7 @@
     // putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
     const getAllDirectors = () => {
-        fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
+        fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}, mode:'cors'})
         .then(response => response.json())
         .then(response => {
             console.log(response)
@@ -58,6 +58,7 @@ const listDirectors = (arrayDirector) => {
         const inputDirectors = document.getElementById('select_directores');
         arrayDirector.forEach((director)=>{
             optionDirector = document.createElement('option')
+            optionDirector.classList.add('inputDirector')
             optionDirector.value = director.id_director;
             optionDirector.textContent = `${director.d_nombre} ${director.d_apellido}`
             inputDirectors.appendChild(optionDirector)
@@ -71,3 +72,4 @@ const listDirectors = (arrayDirector) => {
 document.addEventListener('DOMContentLoaded',()=>{
     getAllDirectors();
 })
+
