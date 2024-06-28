@@ -75,6 +75,6 @@ more.addEventListener("click", ()=> {
 })
 
 document.addEventListener("DOMContentLoaded", () =>{
-  renderTrendingMovies();
+  // renderTrendingMovies();
   getAcclaimedMovies();
 })
