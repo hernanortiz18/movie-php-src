@@ -1,10 +1,22 @@
 <?php
 include '../ingresosDB/conn.php';
 include '../Clases/pelicula_class.php';
-//FALTA HACER MODIFICAR CAMPOS PARA ALTA DE PELICULAS
+//RECIBE EL Json
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    // Insertar una nueva película
+    $peliculas = new Peliculas();// conectate a la base automaticamente
+    $postBody = file_get_contents("php://input");// levanta el json del body
+    $datosArray = $peliculas->insertarPelicula($postBody);
+    // Retornar la respuesta
+    respuestaJson(201, 'Pelicula insertada correctamente');
+}
 
 
-// Verificar que los campos del formulario no estén vacíos, deben venir todos los datos
+
+
+
+
+/* Verificar que los campos del formulario no estén vacíos, deben venir todos los datos
 if (!empty($_POST['titulo']) && !empty($_POST['fecha_lanzamiento']) && !empty($_POST['genero']) && !empty($_POST['duracion']) && !empty($_POST['id_director']) && !empty($_POST['reparto']) && !empty($_POST['sinopsis']) && !empty($_POST['imagen'])) {
    
     // Crear un nuevo objeto Película
@@ -29,5 +41,5 @@ if (!empty($_POST['titulo']) && !empty($_POST['fecha_lanzamiento']) && !empty($_
         $conn->close();
 } else {
     echo "La Película no puedo ser ingresada con exito";
-}
+}*/
 ?>
