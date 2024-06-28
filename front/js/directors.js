@@ -1,17 +1,22 @@
-import { Directors } from "./utils"
+import utils from './utils';
 
-const {getAllDirectors} = Directors;
+const {Directors} = utils;
 
-const listDirectors = (arrayDirector) => {
+const listDirectors = async() => {
+    try{
+        const arrayDirector = await Directors.getAllDirectors();
+        console.log(arrayDirector)
+        const inputDirectors = document.getElementById('select_directores')
+        arrayDirector.forEach((director)=>{
+            optionDirector = document.createElement('option')
+            optionDirector.value = director.id_director;
+            optionDirector.textContent = `${director.d_nombre} ${director.d_apellido}`
+            inputDirectors.appendChild(optionDirector)
+        })
+    } catch (error) {
+        console.log('Error: ', error)
+    }
 
-    const arrayDirector = getAllDirectors()
-    const inputDirectors = document.getElementById('select_directores')
-    arrayDirector.forEach((director)=>{
-        optionDirector = document.createElement('option')
-        optionDirector.value = director.id_director;
-        optionDirector.textContent = `${director.d_nombre} ${director.d_apellido}`
-        inputDirectors.appendChild(optionDirector)
-    })
 }
 
 document.addEventListener('DOMContentLoaded',()=>{

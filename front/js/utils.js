@@ -1,22 +1,22 @@
-export const Movies = {
+const Movies = {
     getOptions : {method: 'GET',headers: {'Content-Type': 'application/json',}},
     
     postOptions : (data) => {return {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)}},
     
-    deleteOptions : {method: 'DELETE', headers: {'Content-Type':'application/json'}, body: JSON.stringify(result)},
+    deleteOptions : {method: 'DELETE', headers: {'Content-Type':'application/json'}, body: JSON.stringify({id})},
     
     putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
     
     getAllMovies: () => {
         fetch('../../controlador/cargar_peliculas.php', Movies.getOptions)
-        .then(result => result.json)
+        .then(result => result.json())
         .then(result => {return result})
         .catch((err)=>console.error(err))
     },    
     addMovie: (data) => {
         fetch('../../controlador/alta/alta_peliculas.php', Movies.postOptions(data))
         .then((response) => {
-            if (response.status(201)) return response
+            if (response.status===201) return response
             else (console.log('Error conection'))
         })
         .then(response=>{
@@ -37,7 +37,7 @@ export const Movies = {
     updateMovie: (data) => {
         fetch('', Movies.putOptions)
         .then(response => {
-            if (response.status(200)) return response
+            if (response.status===200) return response
             else (console.log('Error conection'))
         })
         .then(response => {
@@ -47,19 +47,30 @@ export const Movies = {
     }
 }
 
-export const Directors = {
+const Directors = {
+
+    getOptions : {method: 'GET',headers: {'Content-Type': 'application/json',}},
+    
+    postOptions : (data) => {return {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)}},
+    
+    deleteOptions : {method: 'DELETE', headers: {'Content-Type':'application/json'}, body: JSON.stringify({id})},
+    
+    putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
     getAllDirectors: () => {
-        fetch('../../controlador/cargar_directores', Movies.getOptions)
+        fetch('../../controlador/cargar_directores.php', Directors.getOptions)
         .then(response=>response.json())
-        .then(data=>{return data})
+        .then(data=>{
+            console.log(data)
+            return data
+        })
         .catch(err=>console.error(err))
     },
 
     addDirector: (data) => {
-        fetch('../../controlador/alta/alta_peliculas.php', Movies.postOptions(data))
+        fetch('../../controlador/alta/alta_peliculas.php', Directors.postOptions(data))
         .then((response) => {
-            if (response.status(201)) return response
+            if (response.status===201) return response
             else (console.log('Error conection'))
         })
         .then(response=>{
@@ -69,7 +80,7 @@ export const Directors = {
         .catch((err)=>console.error(err))
     },    
     deleteDirector: (id) => {
-        fetch('', Movies.deleteOptions)
+        fetch('', Directors.deleteOptions)
         .then(response=>{
             if (response.status(204)) {
                 console.log('Película eliminada con éxito')
@@ -78,9 +89,9 @@ export const Directors = {
         })
     },
     updateDirector: (data) => {
-        fetch('', Movies.putOptions)
+        fetch('', Directors.putOptions)
         .then(response => {
-            if (response.status(200)) return response
+            if (response.status===200) return response
             else (console.log('Error conection'))
         })
         .then(response => {
@@ -90,3 +101,5 @@ export const Directors = {
     }
 
 }
+
+export default {Directors, Movies};

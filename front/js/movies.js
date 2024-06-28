@@ -1,4 +1,4 @@
-import { Movies } from "./utils";
+import { Movies } from "./utils.js";
 
 const {getAllMovies} = Movies;
 
