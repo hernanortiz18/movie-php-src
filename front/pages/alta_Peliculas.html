@@ -30,17 +30,32 @@
       <section  data-aos="zoom-in"  data-aos-duration="1000" class="col-8 col-md-4 mt-2 ">
         <form class="form" id="formDirector" class="form-signin alert alert-dark" role="alert" action="../../controlador/alta/alta_peliculas.php" method="post" >
             <h1 class="h3 mb-3 font-weight-normal">Alta de Película</h2>
-                <input type="text" class="form-control " id="inputNombre" placeholder="Título" required  name="title">
+
+                <input type="text" class="form-control " id="inputNombre" placeholder="Título"  name="title">
                 <div id="nombreError" class="error-message"></div>
+
+                <input type="date" class="form-control mt-2" id="fecha" placeholder="Fecha de Lanzamiento (dd/mm/aaaa)"  id="fechaLanzamiento" name="fechaLanzamiento">
+                <div id="fNacimientoError" class="error-message"></div>  
+                
+                <input type="text" class="form-control " id="inputGenero" placeholder="Genero"  name="genero">
+                <div id="nombreError" class="error-message"></div>
+
+                <input type="text" class="form-control " id="inputDuracion" placeholder="duracion"   name="duracion">
+                <div id="nombreError" class="error-message"></div>
+                
                 <select id="select_directores">
                   <option value="">Director</option>
                 </select>
-                <div id="apellidoError" class="error-message"></div>
-                <textarea class="form-control mt-2" id="sinopsis" placeholder="Sinopsis" required  name="sinopsis"></textarea>
-                <div id="NacError" class="error-message"></div>
-                <p>fecha de lanzamiento</p>
-                <input type="date" class="form-control mt-2" id="fecha" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" required id="fechaNacimiento" name="fechaNacimiento">
-                <div id="fNacimientoError" class="error-message"></div>              
+
+                <textarea rows="5" cols="10" class="form-control " id="inputReparto" placeholder="reparto"   name="reparto">
+                <div id="nombreError" class="error-message"></div>
+                
+                <textarea rows="5" cols="10" class="form-control " id="inputSinopsis" placeholder="Sinopsis"   name="sinopsis">
+                  <div id="nombreError" class="error-message"></div>
+                 
+                  <input type="text" class="form-control " id="inputImagen" placeholder="imagen"   name="imagen">
+                  <div id="nombreError" class="error-message"></div>  
+          
                 <input class="btn btn-lg btn-primary btn-block submit-button" type="submit" value="REGISTRAR PELICULA">        
         </form>
       </section>
