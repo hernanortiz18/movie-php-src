@@ -8,6 +8,7 @@ class Pelicula {
     public $reparto;
     public $sinopsis;
     public $imagen;
+
     public function __construct($titulo, $fechaLanzamiento, $genero, $duracion, $director, $reparto, $sinopsis, $imagen) {
         $this->titulo = $titulo;
         $this->fechaLanzamiento = $fechaLanzamiento;
@@ -18,14 +19,10 @@ class Pelicula {
         $this->sinopsis = $sinopsis;
         $this->imagen = $imagen;
     }
-public function insertarPelicula($json) {
+public function insertarPelicula($pelicula, $conn) {
             /* paso los datos del json a un array*/ 
-            $datos = json_decode($json, true);
-
-        // Crear un nuevo objeto Película
-        $pelicula = new Pelicula($datos['titulo'], $datos['fecha_lanzamiento'], $datos['genero'], $datos['duracion'], $datos['id_director'], $datos['reparto'], $datos['sinopsis'], $datos['imagen']);
-        
-        if (!empty($pelicula['titulo']) && !empty($pelicula['fecha_lanzamiento']) && !empty($pelicula['genero']) && !empty($pelicula['duracion']) && !empty($pelicula['id_director']) && !empty($pelicula['reparto']) && !empty($pelicula['sinopsis']) && !empty($pelicula['imagen'])) {
+          /*  $datos = json_decode($json, true);*/      
+        if (!empty($pelicula->titulo) && !empty($pelicula->fecha_lanzamiento) && !empty($pelicula->genero) && !empty($pelicula->duracion) && !empty($pelicula->id_director) && !empty($pelicula->reparto) && !empty($pelicula->sinopsis) && !empty($pelicula->imagen)) {
            // Preparar la sentencia para insertar la película
            $stmt = $conn->prepare("INSERT INTO peliculas (`titulo`, `fecha_lanzamiento`, `genero`, `duracion`, `director`, `reparto`, `sinopsis`, `imagen`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
            $stmt->bind_param("ssssssss", $pelicula->titulo, $pelicula->fechaLanzamiento, $pelicula->genero, $pelicula->duracion, $pelicula->director, $pelicula->reparto, $pelicula->sinopsis, $pelicula->imagen);
@@ -48,11 +45,6 @@ public function insertarPelicula($json) {
     }
 }
 
-function respuestaJson($statusCode, $response) {
-    http_response_code($statusCode);
-    echo json_encode($response);
-    exit(); // die finalizar el script
-}
 
 }
 

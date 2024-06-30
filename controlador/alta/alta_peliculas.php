@@ -4,13 +4,20 @@ include '../Clases/pelicula_class.php';
 //RECIBE EL Json
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // Insertar una nueva película
-    $peliculas = new Peliculas();// conectate a la base automaticamente
     $postBody = file_get_contents("php://input");// levanta el json del body
-    $datosArray = $peliculas->insertarPelicula($postBody);
+    parse_str($postBody, $datos);
+   // print_r($datos);
+    $peliculas = new Pelicula($datos["title"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
+    $datosArray = $peliculas->insertarPelicula($postBody,$conn);
     // Retornar la respuesta
     respuestaJson(201, 'Pelicula insertada correctamente');
 }
 
+function respuestaJson($statusCode, $response) {
+    http_response_code($statusCode);
+    echo json_encode($response);
+    exit(); // die finalizar el script
+}
 
 
 

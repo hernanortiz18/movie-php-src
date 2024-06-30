@@ -1,8 +1,24 @@
 <?php
 include '../ingresosDB/conn.php';
-include '../Clases/director_class.php';
+include_once '../Clases/director_class.php';
+//RECIBE EL Json
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    // Insertar una nueva película
+    $postBody = file_get_contents("php://input");// levanta el json del body
+    parse_str($postBody, $datos);
+    $director = new Director($datos["nombre"], $datos['apellido'], $datos['fechaNacimiento'], $datos['nacionalidad']);
+   // print_r($director);
+    $datosArray = $director->insertarDirector($director, $conn);  
+}
 
-// Verificar que los campos del formulario no estén vacíos
+function respuestaJson($statusCode, $response) {
+    http_response_code($statusCode);
+    echo json_encode($response);
+    exit(); // die finalizar el script
+}   
+
+
+/* Verificar que los campos del formulario no estén vacíos
 if (!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['fechaNacimiento']) && !empty($_POST['nacionalidad'])) {
     // Crear un nuevo objeto Director
     $director = new Director($_POST['nombre'], $_POST['apellido'], $_POST['fechaNacimiento'], $_POST['nacionalidad']);
@@ -19,5 +35,5 @@ if (!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['fec
 } else {
     echo "El Director no puedo ser ingresado con exito";
 }
-
+*/
 ?>
