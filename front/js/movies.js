@@ -5,7 +5,7 @@ const putOptions =  (data) => { return {method: 'PUT', headers: {'Content-Type':
 const apiMovies = {
   
     getAcclaimedMovies : () => {
-      fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, {method: 'GET',
+      return fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, {method: 'GET',
         headers: {
           accept: 'application/json',
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYmY4NGI2M2NjOGVhMWMxZDE1YTRhNjU0NzVmMmE0YyIsInN1YiI6IjY1M2ZmMTM3NTA3MzNjMDBmZjRiNzYyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.szjOC0tJo_5aYEAxLYxvvJHY8s7M-RhHR_2rMkJzNUY'
@@ -40,21 +40,22 @@ const apiMovies = {
 const crudMovies = {
 
     getAllMovies: () => {
-            fetch('http://localhost/movie-php-src/controlador/cargar_peliculas.php',{method: 'GET',headers: {'Content-Type': 'application/json',}})
+            return fetch('http://localhost/movie-php-src/controlador/cargar_peliculas.php',{method: 'GET',headers: {'Content-Type': 'application/json',}})
             .then(result => result.json())
             .then(result => {return result})
             .catch((err)=>console.error(err))
     },
     
-    addMovie: (data) => {
-        fetch('http://localhost/movie-php-src/controlador/alta/alta_peliculas.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)})
+    addMovie: (newMovie) => {
+        return fetch('http://localhost/movie-php-src/controlador/alta/alta_peliculas.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({newMovie})})
         .then((response) => {
-            if (response.ok) return response
+            if (response.ok) response
             else (console.log('Error conection'))
         })
         .then(response=>{
-            alert('Película cargada con éxito')
-            console.log(response)
+            window.location.reload()
+            alert('Película cargada con éxito');
+            return response
         })
         .catch((err)=>console.error(err))
     },
@@ -143,6 +144,7 @@ document.addEventListener('DOMContentLoaded', async () =>{
     console.log('PATH: ', path)
     const movies = await crudMovies.getAllMovies();
     console.log(movies)
+    
     if (path=="index.html") {
         movies?renderMovies.grid(movies):{}
         apiMovies.getAcclaimedMovies()
