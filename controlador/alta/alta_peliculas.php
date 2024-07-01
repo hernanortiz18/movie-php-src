@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     parse_str($postBody, $datos);
    // print_r($datos);
     $peliculas = new Pelicula($datos["title"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
-    
     $datosArray = $peliculas->insertarPelicula($peliculas,$conn);
 }
 

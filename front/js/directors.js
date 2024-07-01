@@ -13,10 +13,11 @@ const getAllDirectors = () => {
 const addDirector= (data) => {
     fetch('http://localhost/movie-php-src/controlador/alta/alta_directores.php', postOptions(data))
     .then((response) => {
-        if (response.ok) return response
+        if (response.ok) response
         else (console.log('Error conection'))
     })
     .then(response=>{
+        window.location.reload()
         alert('Película cargada con éxito')
         console.log(response)
      })
@@ -67,5 +68,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const directors = await getAllDirectors();
     if (path==="alta_Peliculas.html"){
         listDirectors(directors);
+    }
+    if (path==="alta_director.html") {
+        const form = document.getElementById("formDirector");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const data = {
+                nombre: document.getElementById("inputNombre").value,
+                apellido: document.getElementById("inputApellido").value,
+                fechaNacimiento: document.getElementById("fecha").value,
+                nacionalidad: document.getElementById("nacionalidad").value,
+            }
+            addDirector(data)
+        })
     }
 })
