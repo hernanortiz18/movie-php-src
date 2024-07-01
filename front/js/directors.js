@@ -5,12 +5,8 @@ const postOptions = (data) => {return {method: 'POST', headers: {'Content-Type':
 // putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
 const getAllDirectors = () => {
-    fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
-    .then(response => response.json())
-    .then(response => {
-        console.log(response)
-        return response
-    })
+    return fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
+    .then(response=>response.json())
     .catch((err)=>console.error(err))
 }
 
@@ -65,11 +61,11 @@ const listDirectors = (arrayDirector) => {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const location = window.location.pathname.split('/');
-    const path = location[location.length-1]
+    const pathArray = window.location.pathname.split('/');
+    const path = pathArray[pathArray.length-1]
     console.log('PATH: ', path)
     const directors = await getAllDirectors();
-    if (path=="alta_peliculas.html") {
-        listDirectors(directors)
+    if (path==="alta_Peliculas.html"){
+        listDirectors(directors);
     }
 })
