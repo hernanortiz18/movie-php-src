@@ -107,10 +107,52 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
-    if(path==="alta_director.js"){
-
+    if(path==="alta_director.html"){
+        const form = document.getElementById("formDirector");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const validForm = () =>{
+                const nameValid = validate.validateText('name');
+                const lastNameValid = validate.validateText('lastName');
+                const countryValid = validate.validateText('country');
+                const dateValid = validate.validateText('date');
+                if (!nameValid || !lastNameValid || !countryValid || !dateValid){
+                    return false
+                } else {
+                    return true
+                }
+            }
+            if (!validForm()){
+                console.log("Errores en el formulario")
+            } else {
+                console.log("Enviado exitosamente")
+            }
+        })
     }
-    if(path==="alta_Peliculas.js"){
-
+    if(path==="alta_Peliculas.html"){
+        const form = document.getElementById("form-movie");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const validForm = () =>{
+                const titleValid = validate.validateText('title');
+                const dateValid = validate.validateText('date');
+                const durationValid = validate.validateText('duration');
+                const genreValid = validate.validateText('genre');
+                const directorValid = validate.validateText('director');
+                const castValid = validate.validateText('cast');
+                const synopsisValid = validate.validateText('synopsis');
+                const imageValid = validate.validateText('image');
+                if (!titleValid || !durationValid || !genreValid || !dateValid || !directorValid || !castValid || !synopsisValid || !imageValid){
+                    return false
+                } else {
+                    return true
+                }
+            }
+            if (!validForm()){
+                console.log("Errores en el formulario")
+            } else {
+                console.log("Enviado exitosamente")
+            }
+        })
     }
 })
