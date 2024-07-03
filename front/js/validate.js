@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const validForm = () =>{
                 const titleValid = validate.validateText('title');
                 const dateValid = validate.validateText('date');
-                const durationValid = validate.validateText('duration');
-                const genreValid = validate.validateText('genre');
+                const durationValid = validate.validateText('genre');
+                const genreValid = validate.validateText('duration');
                 const directorValid = validate.validateText('director');
                 const castValid = validate.validateText('cast');
                 const synopsisValid = validate.validateText('synopsis');

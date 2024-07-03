@@ -11,11 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $datosArray = $director->insertarDirector($director, $conn);  
 }
 
-function respuestaJson($statusCode, $response) {
-    http_response_code($statusCode);
-    echo json_encode($response);
-    exit(); // die finalizar el script
-}   
+
 
 
 /* Verificar que los campos del formulario no estén vacíos
