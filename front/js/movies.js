@@ -87,24 +87,26 @@ const renderMovies = {
     grid : (arrayMovies) => {
     
         arrayMovies.forEach(((movie)=>{
-          const movieContainer = document.getElementsByClassName("grid-movies")[0]
+        
+            
+            const movieContainer = document.getElementsByClassName("grid-movies")[0]
     
-          const cardMovie = document.createElement("div")
-          const anchor = document.createElement("a")
-          const imageMovie = document.createElement("img")
-          const title = document.createElement("h4")
+            const cardMovie = document.createElement("div")
+            const anchor = document.createElement("a")
+            const imageMovie = document.createElement("img")
+            const title = document.createElement("h4")
     
-          cardMovie.classList.add("card-movie")
-          anchor.href="./pages/detail.html"
+            cardMovie.classList.add("card-movie")
+            anchor.href="./pages/detail.html"
     
-          title.textContent=movie.titulo
-          imageMovie.alt=movie.titulo
-          imageMovie.src = `./front/assets/image/movies/trending/${imagen}`
+            title.textContent=movie.titulo
+            imageMovie.alt=movie.titulo
+            imageMovie.src = `./front/assets/image/movies/trending/${movie.imagen}`
     
-          anchor.appendChild(imageMovie);
-          anchor.appendChild(title);
-          cardMovie.appendChild(anchor);
-          movieContainer.appendChild(cardMovie);
+            anchor.appendChild(imageMovie);
+            anchor.appendChild(title);
+            cardMovie.appendChild(anchor);
+            movieContainer.appendChild(cardMovie);
         }))
     },
     
