@@ -26,7 +26,7 @@ const apiMovies = {
        
         imageMovie.src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
         imageMovie.alt = movie.title
-        anchor.href="./pages/detail.html"
+        anchor.href="./front/pages/detail.html"
         
         anchor.appendChild(imageMovie);
         movieCard.appendChild(anchor);
