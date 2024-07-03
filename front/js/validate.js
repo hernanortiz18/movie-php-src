@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             if (!validForm()){
-                console.log("Errores en el formulario")
+                console.log("Errores en el formulario")      
             } else {
                 console.log("Enviado exitosamente")
             }

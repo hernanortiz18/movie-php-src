@@ -13,14 +13,12 @@ const getAllDirectors = () => {
 const addDirector= (data) => {
     fetch('http://localhost/movie-php-src/controlador/alta/alta_directores.php', postOptions(data))
     .then((response) => {
-        if (response.ok) response
+        if (response.ok) {
+            alert('Película cargada con éxito')
+            // window.location.reload()
+        }
         else (console.log('Error conection'))
     })
-    .then(response=>{
-        window.location.reload()
-        alert('Película cargada con éxito')
-        console.log(response)
-     })
     .catch((err)=>console.error(err))
 }
 const deleteDirector = (id) => {
