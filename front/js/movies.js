@@ -97,9 +97,9 @@ const renderMovies = {
           cardMovie.classList.add("card-movie")
           anchor.href="./pages/detail.html"
     
-          title.textContent=movie.title
-          imageMovie.alt=movie.title
-          imageMovie.src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
+          title.textContent=movie.titulo
+          imageMovie.alt=movie.titulo
+          imageMovie.src = `./front/assets/image/movies/trending/${imagen}`
     
           anchor.appendChild(imageMovie);
           anchor.appendChild(title);
