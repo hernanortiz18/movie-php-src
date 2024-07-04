@@ -5,7 +5,10 @@ include_once '../Clases/director_class.php';
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // Insertar una nueva película
     $postBody = file_get_contents("php://input");// levanta el json del body
-    parse_str($postBody, $datos);
+    $datos = json_decode($postBody,true);
+    print_r($datos);
+   
+   // parse_str($postBody, $datos);
     $director = new Director($datos["nombre"], $datos['apellido'], $datos['fechaNacimiento'], $datos['nacionalidad']);
    // print_r($director);
     $datosArray = $director->insertarDirector($director, $conn);  
