@@ -1,48 +1,48 @@
-const postOptions = (data) => {return {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)}}
-    
+
 // deleteOptions : {method: 'DELETE', headers: {'Content-Type':'application/json'}, body: JSON.stringify({id})},
-    
+
 // putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
-const getAllDirectors = () => {
-    return fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
-    .then(response=>response.json())
-    .catch((err)=>console.error(err))
-}
-
-const addDirector= (data) => {
-    fetch('http://localhost/movie-php-src/controlador/alta/alta_directores.php', postOptions(data))
-    .then((response) => {
-        if (response.ok) {
-            alert('Película cargada con éxito')
-            // window.location.reload()
+export const crudDirector = {
+    getAllDirectors: () => {
+        return fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
+        .then(response=>response.json())
+        .catch((err)=>console.error(err))
+    },
+    
+    addDirector: (dataDirector) => {
+        return fetch('http://localhost/movie-php-src/controlador/alta/alta_directores.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(dataDirector)})
+        .then((response) => {
+            if (response.ok) {
+                alert('Película cargada con éxito')
+                // window.location.reload()
+            }
+            else (console.log('Error conection'))
+        })
+        .catch((err)=>console.error(err))
+    },
+    deleteDirector: (id) => {
+        fetch('', Directors.deleteOptions)
+        .then(response=>{
+        if (response.status(204)) {
+        console.log('Película eliminada con éxito')
+        alert('')
         }
+        })
+    },
+    updateDirector: (data) => {
+        fetch('', Directors.putOptions)
+        .then(response => {
+        if (response.status===200) return response
         else (console.log('Error conection'))
-    })
-    .catch((err)=>console.error(err))
-}
-const deleteDirector = (id) => {
-    fetch('', Directors.deleteOptions)
-    .then(response=>{
-    if (response.status(204)) {
-    console.log('Película eliminada con éxito')
-    alert('')
-    }
-    })
-}
-const updateDirector = (data) => {
-    fetch('', Directors.putOptions)
-    .then(response => {
-    if (response.status===200) return response
-    else (console.log('Error conection'))
-    })
-    .then(response => {
-    alert('Película actualizada con éxito')
-    console.log(response)
-    })
-}
+        })
+        .then(response => {
+        alert('Película actualizada con éxito')
+        console.log(response)
+        })
+    },
 
-
+}
 
 const listDirectors = (arrayDirector) => {
     try{        
@@ -63,21 +63,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pathArray = window.location.pathname.split('/');
     const path = pathArray[pathArray.length-1]
     console.log('PATH: ', path)
-    const directors = await getAllDirectors();
+    const directors = await crudDirector.getAllDirectors();
     if (path==="alta_Peliculas.html"){
         listDirectors(directors);
     }
-    if (path==="alta_director.html") {
-        const form = document.getElementById("formDirector");
-        form.addEventListener("submit", (e)=>{
-            e.preventDefault();
-            const data = {
-                nombre: document.getElementById("inputNombre").value,
-                apellido: document.getElementById("inputApellido").value,
-                fechaNacimiento: document.getElementById("fecha").value,
-                nacionalidad: document.getElementById("nacionalidad").value,
-            }
-            addDirector(data)
-        })
-    }
 })
+
