@@ -1,3 +1,5 @@
+import { crudDirector } from "./directors.js";
+
 const validate = {
     validatePass: () => {
         const pass = document.getElementsByClassName("input-password")[0];
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!validForm()){
                 console.log("Errores en el formulario")
             } else {
+                
                 console.log("Enviado exitosamente")
             }
         })
@@ -125,6 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!validForm()){
                 console.log("Errores en el formulario")
             } else {
+                const newDirector = {
+                    nombre: document.getElementById("inputNombre").value,
+                    apellido: document.getElementById("inputApellido").value,
+                    fechaNacimiento: document.getElementById("fecha").value,
+                    nacionalidad: document.getElementById("nacionalidad").value,
+                }
+                crudDirector.addDirector(newDirector)
                 console.log("Enviado exitosamente")
             }
         })
