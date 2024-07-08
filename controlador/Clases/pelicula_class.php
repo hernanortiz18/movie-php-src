@@ -24,11 +24,11 @@ class Pelicula {
            // print_r($pelicula);  echo  $pelicula->titulo;       
             if (!empty($pelicula->titulo) && !empty($pelicula->fechaLanzamiento) && !empty($pelicula->genero) && !empty($pelicula->duracion) && !empty($pelicula->director) && !empty($pelicula->reparto) && !empty($pelicula->sinopsis) && !empty($pelicula->imagen)) {
                 // Preparar la sentencia para insertar la película
-                $stmt = $conn->prepare("INSERT INTO peliculas (`titulo`, `fecha_lanzamiento`, `genero`, `duracion`, `director`, `reparto`, `sinopsis`, `imagen`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param("ssssssss", $pelicula->titulo, $pelicula->fechaLanzamiento, $pelicula->genero, $pelicula->duracion, $pelicula->director, $pelicula->reparto, $pelicula->sinopsis, $pelicula->imagen);
-                    //ejecuta la sentencia
-                    $stmt->execute();
-                    echo "Nueva Película ingresado con exito";
+                // $stmt = $conn->prepare("INSERT INTO peliculas (`titulo`, `fecha_lanzamiento`, `genero`, `duracion`, `director`, `reparto`, `sinopsis`, `imagen`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                // $stmt->bind_param("ssssssss", $pelicula->titulo, $pelicula->fechaLanzamiento, $pelicula->genero, $pelicula->duracion, $pelicula->director, $pelicula->reparto, $pelicula->sinopsis, $pelicula->imagen);
+                //     //ejecuta la sentencia
+                //     $stmt->execute();
+                //     echo "Nueva Película ingresado con exito";
                     // Obtener el ID de la película recién insertada
                         $pelicula_id = $conn->insert_id;
                         // Preparar la sentencia para insertar en directores_peliculas
