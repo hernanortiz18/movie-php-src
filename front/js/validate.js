@@ -1,4 +1,5 @@
 import { crudDirector } from "./directors.js";
+import { crudMovies } from "./movies.js";
 
 const validate = {
     validatePass: () => {
@@ -161,6 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!validForm()){
                 console.log("Errores en el formulario")      
             } else {
+                const newMovie = {
+                    titulo: document.getElementById('inputNombre').value,
+                    fechaLanzamiento: document.getElementById('fecha').value,
+                    genero: document.getElementById('inputGenero').value,
+                    duracion: document.getElementById('inputDuracion').value,
+                    director: document.getElementById('select_directores').value,
+                    reparto: document.getElementById('inputReparto').value,
+                    sinopsis: document.getElementById('inputSinopsis').value,
+                    imagen: document.getElementById('inputImagen').value,
+                }
+                crudMovies.addMovie(newMovie);
                 console.log("Enviado exitosamente")
             }
         })

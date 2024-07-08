@@ -37,7 +37,7 @@ const apiMovies = {
     }
   }
   
-const crudMovies = {
+export const crudMovies = {
 
     getAllMovies: () => {
             return fetch('http://localhost/movie-php-src/controlador/cargar_peliculas.php',{method: 'GET',headers: {'Content-Type': 'application/json',}})
@@ -46,8 +46,8 @@ const crudMovies = {
             .catch((err)=>console.error(err))
     },
     
-    addMovie: (newMovie) => {
-        return fetch('http://localhost/movie-php-src/controlador/alta/alta_peliculas.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({newMovie})})
+    addMovie: (dataMovie) => {
+        return fetch('http://localhost/movie-php-src/controlador/alta/alta_peliculas.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({dataMovie})})
         .then((response) => {
             if (response.ok) response
             else (console.log('Error conection'))
@@ -154,22 +154,4 @@ document.addEventListener('DOMContentLoaded', async () =>{
     if (path=="administrador.html") {
         movies?renderMovies.list(movies):{}
     }
-    if(path=="alta_Peliculas.html") {
-        const form = document.getElementById('form-movie')
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault();
-            const data = {
-                titulo: document.getElementById('inputNombre').value,
-                fechaLanzamiento: document.getElementById('fecha').value,
-                genero: document.getElementById('inputGenero').value,
-                duracion: document.getElementById('inputDuracion').value,
-                director: document.getElementById('select_directores').value,
-                reparto: document.getElementById('inputReparto').value,
-                sinopsis: document.getElementById('inputSinopsis').value,
-                imagen: document.getElementById('inputImagen').value,
-            }
-            crudMovies.addMovie(data);
-        })
-    }
 })
-
