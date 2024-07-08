@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     sinopsis: document.getElementById('inputSinopsis').value,
                     imagen: document.getElementById('inputImagen').value,
                 }
+                console.log('INFORMACION QUE SE ENVIA A ADD MOVIE', newMovie)
                 crudMovies.addMovie(newMovie);
                 console.log("Enviado exitosamente")
             }
