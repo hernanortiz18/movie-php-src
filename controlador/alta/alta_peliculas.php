@@ -5,17 +5,17 @@ include '../Clases/pelicula_class.php';
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // Insertar una nueva película
     $postBody = file_get_contents("php://input");// levanta el json del body
-    $datos = json_decode($postBody,true);
+    parse_str($postBody, $datos);
    // print_r($datos);
-    $peliculas = new Pelicula($datos["titulo"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
+    $peliculas = new Pelicula($datos["title"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
     $datosArray = $peliculas->insertarPelicula($peliculas,$conn);
 }
 
-/*function respuestaJson($statusCode, $response) {
+function respuestaJson($statusCode, $response) {
     http_response_code($statusCode);
     echo json_encode($response);
     exit(); // die finalizar el script
-}*/
+}
 
 
 
