@@ -4,6 +4,7 @@
 // putOptions : (data) => { return {method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)}},
 
 export const crudDirector = {
+    
     getAllDirectors: () => {
         return fetch('http://localhost/movie-php-src/controlador/cargar_directores.php', {method: 'GET', headers: {'Content-Type': 'application/json'}})
         .then(response=>response.json())

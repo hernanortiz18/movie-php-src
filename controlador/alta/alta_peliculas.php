@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $postBody = file_get_contents("php://input");// levanta el json del body
     $datos = json_decode($postBody,true);
    // print_r($datos);
-    $peliculas = new Pelicula($datos["title"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
+    $peliculas = new Pelicula($datos["titulo"],$datos["fechaLanzamiento"],$datos["genero"],$datos["duracion"],$datos["id_director"],$datos["reparto"],$datos["sinopsis"],$datos["imagen"]);
     $datosArray = $peliculas->insertarPelicula($peliculas,$conn);
 }
 
