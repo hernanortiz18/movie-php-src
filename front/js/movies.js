@@ -49,13 +49,11 @@ export const crudMovies = {
     addMovie: (dataMovie) => {
         return fetch('http://localhost/movie-php-src/controlador/alta/alta_peliculas.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({dataMovie})})
         .then((response) => {
-            if (response.ok) response
+            if (response.ok) {
+                alert('Película cargada con éxito');
+                // window.location.reload()
+            }
             else (console.log('Error conection'))
-        })
-        .then(response=>{
-            window.location.reload()
-            alert('Película cargada con éxito');
-            return response
         })
         .catch((err)=>console.error(err))
     },
