@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     fechaLanzamiento: document.getElementById('fecha').value,
                     genero: document.getElementById('inputGenero').value,
                     duracion: document.getElementById('inputDuracion').value,
-                    director: document.getElementById('select_directores').value,
+                    id_director: document.getElementById('select_directores').value,
                     reparto: document.getElementById('inputReparto').value,
                     sinopsis: document.getElementById('inputSinopsis').value,
                     imagen: document.getElementById('inputImagen').value,
