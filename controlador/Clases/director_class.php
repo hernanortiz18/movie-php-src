@@ -20,26 +20,25 @@ class Director {
             $stmt->bind_param("ssss", $director->nombre, $director->apellido, $director->fechaNacimiento, $director->nacionalidad);
             // Ejecutar la sentencia
             $stmt->execute();
-                echo "Nuevo Director ingresado con exito";
-             //   respuestaJson(200, 'Director insertado correctamente');
+           
+             // respuestaJson(200, 'Director insertado correctamente');
+                   //echo "Nuevo Director ingresado con exito";
                 //cirre del sql y la conexión
                 $stmt->close();
                 $conn->close();
         } else {
-            echo "El Director no puedo ser ingresado con exito";
-         //   respuestaJson(500, 'No se pudo ingresar el director');
+          
+         // respuestaJson(500, 'No se pudo ingresar el director');
+           // echo "El Director no puedo ser ingresado con exito";
             }
         }catch (Exception $e){
-            echo "El Director no puedo ser ingresado con exito";
-          //  respuestaJson(500, 'No se pudo ingresar el director');
+            
+         //  respuestaJson(500, 'No se pudo ingresar el director');
             echo "Error: " . $e->getMessage();
+           //echo "El Director no puedo ser ingresado con exito";
 
         }
-       /* function respuestaJson($statusCode, $response) {
-            http_response_code($statusCode);
-            echo json_encode($response);
-            exit(); // die finalizar el script 
-        } */  
+
 }
 
 }
