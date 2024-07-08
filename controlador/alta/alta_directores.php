@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // Insertar una nueva película
     $postBody = file_get_contents("php://input");// levanta el json del body
     $datos = json_decode($postBody,true);
-    print_r($datos);
+   // print_r($datos);
    
    // parse_str($postBody, $datos);
     $director = new Director($datos["nombre"], $datos['apellido'], $datos['fechaNacimiento'], $datos['nacionalidad']);
