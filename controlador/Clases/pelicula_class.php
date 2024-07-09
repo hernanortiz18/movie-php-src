@@ -9,12 +9,12 @@ class Pelicula {
     public $sinopsis;
     public $imagen;
 
-    public function __construct($titulo, $fechaLanzamiento, $genero, $duracion, $director, $reparto, $sinopsis, $imagen) {
+    public function __construct($titulo, $fechaLanzamiento, $genero, $duracion, $id_director, $reparto, $sinopsis, $imagen) {
         $this->titulo = $titulo;
         $this->fechaLanzamiento = $fechaLanzamiento;
         $this->genero = $genero;
         $this->duracion = $duracion;
-        $this->director = $director;
+        $this->director = $id_director;
         $this->reparto = $reparto;
         $this->sinopsis = $sinopsis;
         $this->imagen = $imagen;
@@ -33,7 +33,7 @@ class Pelicula {
                 $pelicula_id = $conn->insert_id;
                  // Preparar la sentencia para insertar en directores_peliculas
                     $stmt = $conn->prepare("INSERT INTO directores_peliculas (pelicula_id, director_id) VALUES (?, ?)");
-                    $stmt->bind_param("ii", $pelicula_id, $_POST['id_director']);//ver de reemplazar por $plicula->director
+                    $stmt->bind_param("ii", $pelicula_id, $pelicula->director);//ver de reemplazar por $plicula->director
                  // Ejecutar la sentencia
                     $stmt->execute();
                     echo "Relación Director-Película ingresada con éxito";   
