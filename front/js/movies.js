@@ -51,7 +51,7 @@ export const crudMovies = {
         .then((response) => {
             if (response.ok) {
                 alert('Película cargada con éxito');
-                // window.location.reload()
+                window.location.reload()
             }
             else (console.log('Error conection'))
         })
@@ -99,7 +99,7 @@ const renderMovies = {
     
             title.textContent=movie.titulo
             imageMovie.alt=movie.titulo
-            imageMovie.src = `./front/assets/image/movies/trending/${movie.imagen}`
+            imageMovie.src = `./front/assets/image/movies/trending/${movie.imagen}.jpg`
     
             anchor.appendChild(imageMovie);
             anchor.appendChild(title);
