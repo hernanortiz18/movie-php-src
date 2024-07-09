@@ -108,30 +108,39 @@ const renderMovies = {
         }))
     },
     
-    list : () => {
-        const arrayMovies = getAllMovies()
-        const movieList = document.getElementById("movie-list");
+    list : (arrayMovies) => {
+        const movieList = document.getElementsByClassName("movie-list")[0];
         arrayMovies.forEach(movie => {
-            const movieContainer = document.createElement('div')
-            const cardMovie = document.createElement('div')
-            const infoMovie = document.createElement('div')
-            const anchor = document.createElement('a')
+
+            const newItem = document.createElement('li')
+            newItem.id = movie.id_pelicula
+
+            const imageContainer = document.createElement('a')
+            imageContainer.href = "./detail.html";
             const imageMovie = document.createElement('img')
-            const title = document.createElement('p')
-            const director = document.createElement('p')
-    
-    
-            cardMovie.classList.add("card-movie")
-            anchor.href="./detail.html"
-    
-            title.textContent= movie.titulo;
-            imageMovie.alt = movie.titulo;
-            imageMovie.src = `../assets/image/movies/${title}`;
-    
-            anchor.appendChild(imageMovie)
-            cardMovie.appendChild(anchor)
-            infoMovie.appendChild(title)
-            movieContainer.appendChild(infoMovie)
+            imageMovie.src = `../assets/image/movies/trending/${movie.imagen}.jpg`;
+            imageMovie.alt = movie.imagen;
+            
+            imageContainer.classList.add('image-list')
+            
+            imageContainer.appendChild(imageMovie)
+            
+            
+            const infoContainer = document.createElement('div')
+            infoContainer.classList.add('info-movie')
+            const titleMovie = document.createElement('h4')
+            titleMovie.textContent = movie.titulo;
+            const durationMovie = document.createElement('h4')
+            durationMovie.textContent = movie.duracion;
+            
+            infoContainer.appendChild(titleMovie)
+            infoContainer.appendChild(durationMovie)
+            
+
+            newItem.appendChild(imageContainer)
+            newItem.appendChild(infoContainer)
+            movieList.appendChild(newItem)
+
         });
     }
 
@@ -143,13 +152,13 @@ document.addEventListener('DOMContentLoaded', async () =>{
     const path = location[location.length-1]
     console.log('PATH: ', path)
     const movies = await crudMovies.getAllMovies();
-    console.log(movies)
     
     if (path=="index.html") {
         movies?renderMovies.grid(movies):{}
         apiMovies.getAcclaimedMovies()
     }
     if (path=="administrador.html") {
+        console.log(movies)
         movies?renderMovies.list(movies):{}
     }
 })
