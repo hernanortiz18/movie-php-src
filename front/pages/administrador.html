@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/layout.css">
     <title>CAC-MOVIES</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/admin.css">
      
 </head>
 <body>
@@ -27,17 +27,14 @@
             </ul>
           </nav>
     </header>
-    <section class="main">
-        <h2 class="titPrincipal">Administrador de Pelícuas y Directores 
+    <main>
+        <h2 class="titPrincipal">Administrador de Pelícuas y Directores</h2>     
         <section class="sectionPrincipal">
-            
+            <ul class="movie-list"></ul>
             <div class="buttons-admin">
                 <a class="botonRegistrar" href="./alta_director.html">Alta Directores</a>
                 <a class="botonRegistrar" href="./alta_Peliculas.html">Alta Películas</a>   
             </div>
-            <div class="movie-list" id="movie-list">
-            </div>
-        
         </section>
     </main>
     <footer> 
@@ -47,5 +44,6 @@
             <li><a href="">Ayuda</a></li>
         </ul>
     </footer>
+    <script type="module" src="../js/movies.js"></script>
 </body>
 </html>
