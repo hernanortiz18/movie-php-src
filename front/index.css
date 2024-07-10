@@ -67,6 +67,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*inicio marina*/
+    margin: 0% auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+    /*fin marina*/
     
         i{
             color:rgb(255, 255, 255);
@@ -89,10 +95,13 @@
     }
     .grid-movies{
         display: flex;
+       justify-content: space-around;
+      /* justify-content: center;*/
         flex-wrap: wrap;
+        gap:60px;/*tamaño de las canaletas, que es el espacio entre filas y columnas 
+        dentro de la cuadrícula*/
         width: 100%;
         flex-direction: row;
-        justify-content: space-around;
         align-items: center;
         margin: 0 auto;
         
