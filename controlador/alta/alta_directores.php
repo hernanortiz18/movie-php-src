@@ -1,6 +1,10 @@
 <?php
 include '../ingresosDB/conn.php';
 include_once '../Clases/director_class.php';
+header("Access-Control-Allow-Origin: *"); // Permite todos los orígenes. Preferiblemente, especifica sólo los orígenes permitidos.
+header("Access-Control-Allow-Methods: POST, OPTIONS"); // Métodos HTTP permitidos
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"); // Encabezados permitidos
+
 //RECIBE EL Json
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // Insertar una nueva película
